@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- Github -->
+<remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <!-- HZOS -->
+  <remote  name="hz-github"
+           fetch="https://github.com/HZOSPRJ"
+           revision="udc" />
+
+  <remote  name="hz-bb"
+           fetch="https://bitbucket.org/hzos"
+           revision="udc" />
+
+  <!-- Rootdir -->
+  <project path="art" name="android_art" remote="hz-github" />
+  <project path="bionic" name="android_bionic" remote="hz-github" />
+  <project path="manifest" name="android_manifest" remote="hz-github" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="hz-github" />
+
+  <!-- Build -->
+  <project path="build/make" name="android_build" remote="hz-github" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="hz-github" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/hz/sepolicy" name="android_device_hz_sepolicy" remote="hz-github" />
+
+  <!-- External -->
+  <project path="external/piex" name="android_external_piex" remote="hz-github" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="hz-github" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av"  remote="hz-github"/>
+  <project path="frameworks/base" name="android_frameworks_base" remote="hz-github" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="hz-github" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="hz-github" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="hz-github" />
+  <project path="hardware/hz/interfaces" name="android_hardware_hz_interfaces" remote="hz-github" />
+  <project path="hardware/hz/compat" name="android_hardware_hz_compat" remote="hz-github" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="hz-github" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="hz-github" />
+
+   <!-- Packages (Resources) repos -->
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="hz-github" />
+
+  <!-- Packages -->
+  <project path="packages/apps/HZSettings" name="android_packages_apps_HZ" remote="hz-github" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="hz-github" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="hz-github" />
+
+  <!-- Packages (Modules) -->
+  <project path="packages/modules/adb" name="android_packages_modules_adb" remote="hz-github" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="hz-github" />
+  <project path="packages/modules/common" name="android_packages_modules_common" remote="hz-github" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="hz-bb" />
+  <project path="packages/modules/Permission" name="android_packages_modules_Permission"  remote="hz-github" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" remote="hz-github" />
+
+  <!-- Packages (Providers) -->
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="hz-github" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="hz-github" />
+
+  <!-- Packages (services) -->
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="hz-github" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="hz-github" />
+  
+  <!-- System -->
+  <project path="system/core" name="android_system_core" remote="hz-github" />
+  <project path="system/extras" name="android_system_extras" remote="hz-github" />
+  <project path="system/libhidl" name="android_system_libhidl" remote="hz-github" />
+  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="hz-github" />
+  <project path="system/logging" name="android_system_logging" remote="hz-github" />
+  <project path="system/media" name="android_system_media" remote="hz-github" />
+  <project path="system/netd" name="android_system_netd" remote="hz-github" />
+  <project path="system/security" name="android_system_security" remote="hz-github" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="hz-github" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="hz-github" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="hz-github" />
+  <project path="system/vold" name="android_system_vold" remote="hz-github" />
+
+  <!-- Vendor -->
+  <project path="vendor/hz" name="android_vendor_hz" remote="hz-github" />
+  <project path="vendor/support" name="android_vendor_support" remote="hz-github" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.18" />
+  </manifest>
