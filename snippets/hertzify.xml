@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="hertzify"
+           fetch="https://github.com/hzosprj"
+           revision="refs/heads/16" />
+
+  <!-- hertzify additions -->
+  <!-- manifest -->
+  <project path="manifest" name="android_manifest" remote="hertzify" />
+
+  <!-- general -->
+  <project path="art" name="android_art" remote="hertzify" />
+  <project path="bionic" name="android_bionic" remote="hertzify" />
+
+  <!-- bootable -->
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="hertzify" />
+
+  <!-- build -->
+  <project path="build/make" name="android_build" groups="pdk" remote="hertzify" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="hertzify" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- device -->
+  <project path="device/hertzify/sepolicy" name="android_device_hertzify_sepolicy" remote="hertzify" />
+
+  <!-- external -->
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="hertzify" />
+  <project path="external/jemalloc_new" name="android_external_jemalloc_new" groups="pdk" remote="hertzify" />
+  <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="hertzify" />
+  <project path="external/zstd" name="android_external_zstd" groups="pdk" remote="hertzify" />
+
+  <!-- frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="hertzify" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="hertzify" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="hertzify" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="hertzify" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="hertzify" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="hertzify" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="hertzify" />
+
+  <!-- kernel -->
+  <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="hertzify" />
+
+  <!-- packages -->
+  <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="hertzify" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="hertzify" />
+  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="hertzify" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="hertzify" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="hertzify" />
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="hertzify" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="hertzify" />
+
+  <!-- system -->
+  <project path="system/bpf" name="android_system_bpf" remote="hertzify" />
+  <project path="system/core" name="android_system_core" remote="hertzify" />
+  <project path="system/libhidl" name="android_system_libhidl" remote="hertzify" />
+  <project path="system/netd" name="android_system_netd" groups="pdk" remote="hertzify" />
+  <project path="system/security" name="android_system_security" remote="hertzify" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="hertzify" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="hertzify" />
+  <project path="system/vold" name="android_system_vold" remote="hertzify" />
+
+  <!-- vendor -->
+  <project path="vendor/custom-preference" name="android_vendor_custom-preference" remote="hertzify" />
+  <project path="vendor/gms" name="android_vendor_gms" remote="hertzify" clone-depth="1" />
+  <project path="vendor/hertzify" name="android_vendor_hertzify" remote="hertzify" />
+  <project path="vendor/pixel-style" name="android_vendor_pixel-style" remote="hertzify" />
+</manifest>

@@ -1,0 +1,37 @@
+HZOS Project
+===========
+
+Getting started
+---------------
+
+To get started with Android, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+
+To initialize your local repository using the ProjectPixelage trees, use a command like this:
+```
+repo init -u https://github.com/hzosprj/android_manifest.git -b 16 --git-lfs
+```
+Then to sync up:
+```
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+```
+
+Building HZOS
+-------------------
+
+Initialize the ROM environment with the envsetup.sh script.
+
+```bash
+. build/envsetup.sh
+```
+
+Lunch your device after cloning all device sources if needed.
+
+```bash
+lunch hz_codename-buildtype
+```
+
+Start compilation
+
+```bash
+mka bacon
+```
