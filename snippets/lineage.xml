@@ -31,7 +31,7 @@
 
   <!-- hardware -->
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
-  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="lineage" />
+  <project path="hardware/hertzify/interfaces" name="android_hardware_lineage_interfaces" remote="lineage" />
   <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" revision="lineage-22.2" remote="lineage" />
 
   <!-- packages -->
