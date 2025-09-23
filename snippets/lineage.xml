@@ -31,7 +31,6 @@
 
   <!-- hardware -->
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
-  <project path="hardware/hertzify/interfaces" name="android_hardware_lineage_interfaces" remote="lineage" />
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="lineage" />

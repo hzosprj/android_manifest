@@ -48,6 +48,7 @@
 
   <!-- hardware -->
   <project path="hardware/google/pixel" name="android_hardware_google_pixel" remote="hertzify" />
+  <project path="hardware/hertzify/interfaces" name="android_hardware_hertzify_interfaces" remote="hertzify" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="hertzify" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="hertzify" />
 
