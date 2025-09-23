@@ -51,6 +51,7 @@
   <project path="hardware/hertzify/interfaces" name="android_hardware_hertzify_interfaces" remote="hertzify" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="hertzify" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="hertzify" />
+  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="hertzify" />
 
   <!-- kernel -->
   <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="hertzify" />
