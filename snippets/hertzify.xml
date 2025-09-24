@@ -14,6 +14,7 @@
   <project path="bionic" name="android_bionic" remote="hertzify" />
 
   <!-- bootable -->
+  <project path="bootable/deprecated-ota" name="android_bootable_deprecated-ota" remote="hertzify" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="hertzify" />
 
   <!-- build -->
