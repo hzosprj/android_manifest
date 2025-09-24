@@ -80,7 +80,7 @@
   <!-- hardware -->
   <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,pakala-vendor" revision="lineage-23.0-caf" remote="lineage" />
   <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" groups="qcom,legacy-qcom" revision="lineage-23.0-caf" remote="lineage" />
-  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" groups="qcom" remote="lineage" >
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" groups="qcom" remote="hertzify" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
