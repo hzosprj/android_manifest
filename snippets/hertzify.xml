@@ -17,6 +17,10 @@
   <project path="bootable/recovery" name="android_bootable_recovery" remote="hertzify" />
 
   <!-- build -->
+  <project path="build/bazel" name="android_build_bazel" groups="pdk" remote="hertzify" >
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="bazel.BUILD" dest="BUILD" />
+  </project>
   <project path="build/make" name="android_build" groups="pdk" remote="hertzify" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
